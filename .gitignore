@@ -1,6 +1,5 @@
 # API keys — never commit these
 .env
-your_api_keys= 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
 # Python
 __pycache__/
 *.py[cod]

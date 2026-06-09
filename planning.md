@@ -166,10 +166,12 @@
      with my specified chunk size and overlap" is a plan. -->
 
 **Milestone 3 — Ingestion and chunking:**
-     I intend to provide all the strategy and thoughts i have to claude and gemini and see what the results are
+   <!--- I intend to provide all the strategy and thoughts i have to claude and gemini and see what the results are
      hopefully get to learn why the implementation i have might be flawed or naive then get to learn better ways of 
-     implementing these methods.
+     implementing these methods. -->
 
-**Milestone 4 — Embedding and retrieval:**
+**Milestone 4 — Embedding and retrieval:
+
+**
 
 **Milestone 5 — Generation and interface:**
