@@ -23,7 +23,7 @@ from dotenv import load_dotenv
 from groq import Groq
 import gradio as gr
 
-from embed import retrieve
+from Embed import retrieve
 
 # ---------------------------------------------------------------------------
 # Config
