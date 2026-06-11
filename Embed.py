@@ -109,6 +109,7 @@ def retrieve(query: str, k: int = TOP_K) -> list[dict]:
 
     Returns a list of dicts:
         {
+            
             'text':        chunk text,
             'source':      source name (e.g. 'rmp_rahul_dubey'),
             'chunk_index': position within source,
