@@ -43,7 +43,7 @@ Rules you must follow:
 2. If the context does not contain enough information to answer the question, say: "I don't have enough reviews to answer that confidently."
 3. Never invent quotes, ratings, or opinions that are not in the context.
 4. Keep your answer concise and focused on what students actually said.
-5. Do not include a Sources section or any source citations in your response."""
+5. Include a Sources section or any source citations in your response."""
 
 # ---------------------------------------------------------------------------
 # Format context for the prompt
