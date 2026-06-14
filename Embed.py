@@ -1,15 +1,4 @@
-"""
-embed.py — Milestone 4: Embedding + Vector Store
--------------------------------------------------
-Takes chunks produced by ingest.py, embeds them with all-MiniLM-L6-v2,
-and stores them in a persistent local ChromaDB collection.
 
-Also exposes a retrieve(query, k=3) function used by generate.py.
-
-Usage:
-    python embed.py            # build / rebuild the vector store
-    python embed.py --check    # run retrieval checks without rebuilding
-"""
 
 import sys
 import argparse
