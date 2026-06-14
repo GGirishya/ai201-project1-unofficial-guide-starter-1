@@ -1,0 +1,40 @@
+r/missouristate — "Computer Science Students?"
+Original post by MrFlyingTurtles:
+Do any current/previous computer science students have anything to say about the comp sci program at MSU? It's hard to find anything about it online, and with the cheap price, it sounds like a great option, if the program is decent. Thanks!
+
+---
+
+netinept:
+I really value the Computer Science education I got at MSU and am really glad I went through with it and completed my bachelor's degree. Just before my graduation in 2015, I had the choice of three job offers, each paid well and would have been an appropriate challenge. Four years post graduation, I went from living on food stamps below the poverty line to owning a house and living comfortably in California while working for Amazon.
+
+Even though I slacked off fairly hard in a lot of the classes and struggled with the math courses, I poured my heart into the computer science work. I supplemented the CS work with side projects and a part time job for the university's website department (which at the time was called "The Office of Web & New Media", but it seems to have been renamed). I learned an incredible amount from the part time web development, and a ton from the classwork.
+
+It's really just like anything else in life: you get out of it what you put into it.
+
+---
+
+KrunchyKale:
+If you have the ability to come up with projects to do on your own and actively get yourself into internships, you can probably do alright. Just the degree itself and your assignments aren't useful on their own, though - the program doesn't really teach you any applicable industry skills or competency in programming, and my computer science degree from MSU is sitting there uselessly as I barely scrape an income from working at Starbucks.
+
+---
+
+MrFlyingTurtles (OP):
+Well that's uplifting. I'm sorry to hear that!
+
+---
+
+KrunchyKale:
+Nah, I've given up on computers and am moving to Ohio to be a trucker. Also I never once touched Java throughout my entire degree program at MSU. Like I said - no applicable industry skills.
+
+---
+
+compscidictator:
+I felt I got an excellent education through the CS program (and a fairly good deal with in-state tuition), but it's a bit more complicated than "complete the degree then you're good".
+
+Take more challenging classes from the "harder" CS professors whenever possible (but be careful not to burn yourself out with too many at once). Get a CS internship as early and often as you can to bridge the gap between the concepts you'll be learning and the process you'll be applying in every-day work. Identify a group of competent students in your cohort that you can try to take classes with so you can study together and do group projects with.
+
+If you leave Missouri for work (which in a vacuum I recommend due to too few options) chances are nobody will ever have heard of MSU's CS program (or MSU), which sucks just starting out competing against applicants from places like MIT and University of Washington, but get some industry experience and you'll find yourself a co-worker with them in no-time.
+
+Disclaimer: I graduated >5 years ago and the department has lost some excellent professors since my time there (though I hope they've been replaced by equally good ones).
+
+PM me if you want to talk more.

@@ -1,17 +1,4 @@
-"""
-ingest.py — Milestone 3: Document Ingestion and Chunking
----------------------------------------------------------
-Scrapes Reddit threads via the public .json API and RateMyProfessors
-reviews via the unofficial GraphQL API, then chunks the text.
 
-Chunk size : 200 characters
-Overlap    : 20 characters
-Output     : list of dicts — {'text', 'source', 'chunk_index'}
-
-Manual fallback: if a source fails to scrape, drop a .txt file with
-the same name into a documents folder alongside this script and it
-will be picked up automatically.
-"""
 
 import os
 import sys

@@ -1,0 +1,32 @@
+r/missouristate — "Computer Science at MSU"
+Original post by algaedog:
+I'm applying to colleges this year, planning to pursue CS, can anyone from msu in the CS program tell me how it is? Is it easy to get internships? Is it rigorous? Does it prepare you for a job?
+
+---
+
+compscidictator:
+Is it easy to get internships? I found it easy, but I also befriended some people who were already employed in the industry so I had my foot in the door. It's good you're thinking about this though, your CS classes are just setting you up to have a solid foundation on which to build work experience. Without the foundation it'd be easy to only understand the surface-level and make mistakes, and without work-experience you're just an academic (nothing wrong with that except the pay). You'll have 1-2 years to start scoping out who you'll want to work with, and if all else fails you can usually find a student worker position at the university if you look hard enough.
+
+Is it rigorous? People say this, I have no idea what it's supposed to mean. They teach all the basic concepts that you'll need to know (and some that you probably won't, but are important anyway).
+
+Does it prepare you for a job? Yeah, as much as a college degree can. See internships.
+
+---
+
+KCfan6:
+If you want in state tuition for a CS degree go to Rolla. From a MoState alum who's friends now went to Rolla.
+
+---
+
+compscidictator:
+Misouri Science & Technology in  certainly has better "ranking" and maybe a more rigorous course (my buddy nearly went nuts from their math and physics requirements), but TBH if you leave Missouri (the market for CS jobs is much better on either coast) most employers won't recognize either university anyway.
+
+---
+
+KCfan6:
+That isn't true, my friends have gotten jobs in DC and San Fran and they know how good Rolla is when it comes to their science programs. However even if they don't you sort of answered your question, it is a much more rigorous program and a lot of interviews have test that will be easier for you. But Rolla will also have more connections for internships and entry level jobs as their recruiting fairs are geared towards that. MoState has a lot of great programs and a lot of things to offer but if you want to look at job prospects alone and rigor then you ought to go to Rolla for Cs.
+
+---
+
+Mission_Ferret_8487:
+I'd worry less about the quality of any of our programs and focus more on the fact we know how to party. The classes here are a joke, you can pass any exam and if you don't just tell your Professor you'll kill yourself if you get a bad grade because your parents are conservative nutbags who will take you out of school if you fail. Lol, these push overs will do anything you tell them.

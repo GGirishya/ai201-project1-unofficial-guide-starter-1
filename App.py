@@ -1,19 +1,3 @@
-"""
-app.py — Milestone 5: Gradio Interface
----------------------------------------
-The user-facing web UI for the MSU CS Unofficial Guide.
-Imports answer() from generate.py and displays results in a Gradio UI.
-
-Usage:
-    python app.py
-
-Then open http://127.0.0.1:7860 in your browser.
-
-Requirements:
-    - .env file with GROQ_API_KEY=your_key_here
-    - embed.py must have been run first (chroma_store/ must exist)
-    - pip install gradio
-"""
 
 import gradio as gr
 from generate import answer
