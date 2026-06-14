@@ -4,9 +4,6 @@ generate.py — Milestone 5: Grounded Generation
 Core generation logic: retrieves top-3 chunks from ChromaDB and sends
 them to llama-3.3-70b-versatile via Groq to produce a grounded answer.
 
-This module does NOT import Gradio — it is UI-agnostic.
-The Gradio interface lives in app.py, which imports from here.
-
 Usage (checks only, no UI):
     python generate.py --check
 
@@ -44,9 +41,9 @@ You answer questions about CS professors, course difficulty, grading styles, exa
 Rules you must follow:
 1. Answer using ONLY information from the provided context. Do not use any outside knowledge.
 2. If the context does not contain enough information to answer the question, say: "I don't have enough reviews to answer that confidently."
-3. After your answer, always list the sources you used under a "Sources:" heading, using the source names provided in the context.
-4. Never invent quotes, ratings, or opinions that are not in the context.
-5. Keep your answer concise and focused on what students actually said."""
+3. Never invent quotes, ratings, or opinions that are not in the context.
+4. Keep your answer concise and focused on what students actually said.
+5. Do not include a Sources section or any source citations in your response."""
 
 # ---------------------------------------------------------------------------
 # Format context for the prompt
@@ -108,6 +105,9 @@ Question: {query}"""
             max_tokens  = 512,
         )
         answer_text = response.choices[0].message.content.strip()
+        for marker in ["Sources:", "Source:", "sources:", "source:"]:
+            if marker in answer_text:
+                answer_text = answer_text[:answer_text.index(marker)].strip()
     except Exception as e:
         answer_text = f"ERROR calling Groq API: {e}"
 
@@ -154,10 +154,10 @@ def run_checks() -> None:
     else:
         print(f"    PASS ({len(result)} chars)")
 
-    # 5 — response includes Sources section
+    # 5 — response does not include Sources section (as instructed)
     print(f"\n[5] Response includes a Sources section:")
-    if "sources" not in result.lower():
-        print("    WARN — no 'Sources:' found. Model may not be citing context.")
+    if "sources" in result.lower():
+        print("    WARN — model included a Sources section despite being told not to.")
     else:
         print("    PASS")
 
