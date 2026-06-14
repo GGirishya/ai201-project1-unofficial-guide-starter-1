@@ -14,7 +14,7 @@ Usage:
 import sys
 import argparse
 
-from Ingest import ingest, RMP_PROFESSORS, REDDIT_THREADS
+from ingest import ingest, RMP_PROFESSORS, REDDIT_THREADS
 
 from sentence_transformers import SentenceTransformer
 import chromadb
@@ -74,7 +74,8 @@ def build_store(chunks: list[dict], batch_size: int = 128) -> None:
     texts     = [c["text"]         for c in chunks]
     sources   = [c["source"]       for c in chunks]
     indices   = [c["chunk_index"]  for c in chunks]
-    ids       = [f"{src}__{idx}"   for src, idx in zip(sources, indices)]
+    # Use global position to guarantee uniqueness across all sources
+    ids       = [f"{src}__{i}" for i, src in enumerate(sources)]
 
     print(f"Embedding {len(texts)} chunks in batches of {batch_size}...")
 
@@ -109,7 +110,6 @@ def retrieve(query: str, k: int = TOP_K) -> list[dict]:
 
     Returns a list of dicts:
         {
-            
             'text':        chunk text,
             'source':      source name (e.g. 'rmp_rahul_dubey'),
             'chunk_index': position within source,
