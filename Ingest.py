@@ -9,7 +9,7 @@ Overlap    : 20 characters
 Output     : list of dicts — {'text', 'source', 'chunk_index'}
 
 Manual fallback: if a source fails to scrape, drop a .txt file with
-the same name into a documents/ folder alongside this script and it
+the same name into a documents folder alongside this script and it
 will be picked up automatically.
 """
 
@@ -23,9 +23,6 @@ CHUNK_SIZE = 200
 OVERLAP    = 20
 DOCUMENTS_DIR = "documents"   # fallback folder for manually saved .txt files
 
-# ---------------------------------------------------------------------------
-# Source definitions
-# ---------------------------------------------------------------------------
 
 REDDIT_THREADS = [
     {

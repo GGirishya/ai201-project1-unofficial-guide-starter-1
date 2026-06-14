@@ -19,35 +19,12 @@ import gradio as gr
 from generate import answer
 
 
-# ---------------------------------------------------------------------------
-# Gradio handler
-# ---------------------------------------------------------------------------
-
-def handle_query(query: str) -> tuple[str, str]:
-    """
-    Called by Gradio on every submission.
-    Returns (answer_text, retrieved_chunks_display).
-    """
+def handle_query(query: str) -> str:
     if not query.strip():
-        return "Please enter a question.", ""
+        return "Please enter a question."
+    answer_text, _ = answer(query)
+    return answer_text
 
-    answer_text, chunks = answer(query)
-
-    # Format retrieved chunks for the collapsible panel
-    if chunks:
-        chunks_display = ""
-        for i, c in enumerate(chunks, 1):
-            chunks_display += f"**[{i}] {c['source']}** (distance: {c['distance']})\n"
-            chunks_display += f"{c['text']}\n\n"
-    else:
-        chunks_display = "No chunks retrieved."
-
-    return answer_text, chunks_display
-
-
-# ---------------------------------------------------------------------------
-# UI layout
-# ---------------------------------------------------------------------------
 
 with gr.Blocks(title="MSU CS Unofficial Guide") as demo:
 
@@ -71,25 +48,9 @@ with gr.Blocks(title="MSU CS Unofficial Guide") as demo:
         interactive = False,
     )
 
-    with gr.Accordion("Retrieved chunks (what the model saw)", open=False):
-        chunks_box = gr.Markdown()
+    submit_btn.click(fn=handle_query, inputs=[query_box], outputs=[answer_box])
+    query_box.submit(fn=handle_query, inputs=[query_box], outputs=[answer_box])
 
-    # Wire up both the button click and pressing Enter in the text box
-    submit_btn.click(
-        fn      = handle_query,
-        inputs  = [query_box],
-        outputs = [answer_box, chunks_box],
-    )
-    query_box.submit(
-        fn      = handle_query,
-        inputs  = [query_box],
-        outputs = [answer_box, chunks_box],
-    )
-
-
-# ---------------------------------------------------------------------------
-# Entry point
-# ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
     demo.launch()
