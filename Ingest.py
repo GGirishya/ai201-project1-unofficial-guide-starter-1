@@ -27,8 +27,6 @@ DOCUMENTS_DIR = "documents"   # fallback folder for manually saved .txt files
 # Source definitions
 # ---------------------------------------------------------------------------
 
-
-#Needs more work here
 REDDIT_THREADS = [
     {
         "name": "reddit_cs_students",
