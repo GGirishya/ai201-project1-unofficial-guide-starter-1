@@ -48,13 +48,14 @@
      - Any preprocessing you did before chunking (e.g., stripping HTML, removing headers)
      - What your final chunk count was across all documents -->
 
-**Chunk size:**
+**Chunk size: 200 **
 
-**Overlap:**
+**Overlap:20 **
 
-**Why these choices fit your documents:**
+**Why these choices fit your documents:
+200 characters as chunks preserve one coherent thought per chunk. Big chunk would merge unrelated opinions from different reviewers into one chunk, which would merge unrelated opinions, not that it will not happen. I made the overlap to be 20 characters becayse then if by mistake the chunk is cut off then we have a chance to amend the prcess**
 
-**Final chunk count:**
+**Final chunk count: 299 **
 
 ---
 
@@ -108,11 +109,12 @@ Rules you must follow:
 
 | # | Question | Expected answer | System response (summarized) | Retrieval quality | Response accuracy |
 |---|----------|-----------------|------------------------------|-------------------|-------------------|
-| 1 | What do students say about Rahul Dubey's exam difficulty?| The response should reflect a very good rating overall and good teaching style overall| No enoough dat so no relevant answer| good| good|
-| 2 | How do students describe Mukulika Ghosh's grading style?| The response should reflect how Mukulika ghosh is not a good teacher in terms of how she teaches anfd reflect a low rating| The answer is that Gosh is considered as supper difficult | very good| very good|
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | What do students say about Rahul Dubey's exam difficulty?| The response should reflect a very good rating overall and good teaching style overall| No enoough dat so no relevant answer| Off-target| inaccurate|
+| 2 | How do students describe Mukulika Ghosh's grading style?| The response should reflect how Mukulika ghosh is not a good teacher in terms of how she teaches anfd reflect a low rating| The answer is that Gosh is considered as supper difficult | relevant| accurate |
+| 3 | What do MSU CS students say about the overall difficulty of the CS program?| The response should be moderate because most of the things in the document would reflect the good and the bad but the program being affordable should be very and the very first thing to point out| NO accurate answer in regards yo the specific question| partially relevant| partially accurate|
+| 4 | Is Hui Liu recommended by students, and what reasons do they give?| With more than 28 rating the response should reflect that there's a high difficulty in the classes especially since they are high level classes to begiin with| Students have mixed opinions about Hui Liu. One review states that Dr. Liu has poor communication skills and doesn't ensure student success | Partially relevant| Partially accurate|
+| 5 | What do students say about the teaching style of Siming Liu?| The response should be more about relatively good and encouraging.| According to student reviews, Siming Liu's teaching style is described as follows: 
+- His lectures are informative | Partially relevant | Accurate|
 
 **Retrieval quality:** Relevant / Partially relevant / Off-target  
 **Response accuracy:** Accurate / Partially accurate / Inaccurate
@@ -132,13 +134,13 @@ Rules you must follow:
      "The embedding model treated the professor's nickname as out-of-vocabulary and returned
      results from an unrelated review" is an explanation. -->
 
-**Question that failed:**
+**Question that failed:how are rahul dubey exams? **
 
-**What the system returned:**
+**What the system returned: I don't have enough reviews to answer that confidently. The provided context does not contain specific information about Rahul Dubey's exam style or difficulty. **
 
-**Root cause (tied to a specific pipeline stage):**
+**Root cause (tied to a specific pipeline stage): not enough data **
 
-**What you would change to fix it:**
+**What you would change to fix it:get more data **
 
 ---
 
@@ -147,9 +149,9 @@ Rules you must follow:
 <!-- Reflect on how planning.md shaped your implementation.
      Answer both questions with at least 2–3 sentences each. -->
 
-**One way the spec helped you during implementation:**
+**One way the spec helped you during implementation: It helped me to kind of prepare the submission in a way. I think with the planning it was easy to track my steps. **
 
-**One way your implementation diverged from the spec, and why:**
+**One way your implementation diverged from the spec, and why: I think especially with the test questions because you can never know the exact answers that the model will generate. I think with the data loss combined with limited data is what lesd to the divergence. **
 
 ---
 
@@ -166,12 +168,12 @@ Rules you must follow:
 
 **Instance 1**
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+- *What I gave the AI: Multiple reddit pictures to create text files of the data.*
+- *What it produced: cs_msu.txt, cs_students.txt, cs_worth_it.txt.*
+- *What I changed or overrode: just a few checks and minimal checks*
 
 **Instance 2**
 
-- *What I gave the AI:*
-- *What it produced:*
-- *What I changed or overrode:*
+- *What I gave the AI: Is  all-MiniLM-L6-v2 a good model to use for embediing *
+- *What it produced: Yes it is very good to use and does not require a lot of computing power and great for small tasks. It runs locally with no API cost, it very small compared to larger model like text-embedding-3-large (OpenAI) or instructor-xl. would you like me to show you how you can implement or use it in your project? *
+- *What I changed or overrode: this was my final take:  " all-MiniLM-L6-v2 is fast and runs locally with no API cost, making it ideal for a student project. In a real deployment, I would weigh several tradeoffs. A larger model like text-embedding-3-large (OpenAI) would likely score higher on domain-specific text because it has more capacity to distinguish nuanced sentiment. However, those models introduce API latency and per-token cost. Context length is also a factor: all-MiniLM-L6-v2 has a 256-token limit, which is fine for short reviews. A model with a 512- or 1024-token context window would be safer for mixed-length." *

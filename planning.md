@@ -67,7 +67,7 @@
 **Top-k: 3 **
 
 **Production tradeoff reflection: 
-     all-MiniLM-L6-v2 is fast and runs locally with no API cost, making it ideal for a student project. In a real deployment, I would weigh several tradeoffs. A larger model like text-embedding-3-large (OpenAI) or instructor-xl would likely score higher on domain-specific text because it has more capacity to distinguish nuanced sentiment (e.g., "fair grader" vs. "easy grader"). However, those models introduce API latency and per-token cost. Context length is also a factor: all-MiniLM-L6-v2 has a 256-token limit, which is fine for short reviews but would truncate longer forum posts. A model with a 512- or 1024-token context window would be safer for mixed-length corpora. Multilingual support is not a concern here since all sources are in English.
+     all-MiniLM-L6-v2 is fast and runs locally with no API cost, making it ideal for a student project. In a real deployment, I would weigh several tradeoffs. A larger model like text-embedding-3-large (OpenAI) would likely score higher on domain-specific text because it has more capacity to distinguish nuanced sentiment. However, those models introduce API latency and per-token cost. Context length is also a factor: all-MiniLM-L6-v2 has a 256-token limit, which is fine for short reviews but would truncate longer forum posts. A model with a 512- or 1024-token context window would be safer for mixed-length.
 
 **
 
@@ -86,7 +86,7 @@
 | 2 | How do students describe Mukulika Ghosh's grading style?| The response should reflect how Mukulika ghosh is not a good teacher in terms of how she teaches anfd reflect a low rating|
 | 3 | What do MSU CS students say about the overall difficulty of the CS program?| The response should be moderate because most of the things in the document would reflect the good and the bad but the program being affordable should be very and the very first thing to point out|
 | 4 | Is Hui Liu recommended by students, and what reasons do they give?| With more than 28 rating the response should reflect that there's a high difficulty in the classes especially since they are high level classes to begiin with|
-| 5 | What do students say about the teaching style of Siming Liu?| The response should be more about |
+| 5 | What do students say about the teaching style of Siming Liu?| The response should be more about relatively good and encouraging.|
 
 ---
 
