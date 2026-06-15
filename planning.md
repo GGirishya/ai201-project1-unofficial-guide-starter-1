@@ -41,6 +41,7 @@
      State your chunk size (in tokens or characters), overlap size, and explain why those
      numbers fit the structure of your documents.
      A review-heavy corpus warrants different chunking than a long FAQ. -->
+     <!-- I will use a 200 words chunk size and a 20 words overlap -->
 
 **Chunk size:200 characters**
 
